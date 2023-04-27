@@ -229,11 +229,11 @@ class Line:
 
 
 def _preprocess_pig(dataset_dir: Path, save_dir: Path) -> None:
-    assert dataset_dir.exists()
+    assert dataset_dir.exists(), f'{dataset_dir} do not exist'
     save_dir.mkdir(exist_ok=True, parents=True)
 
     fingering_dir = dataset_dir / "FingeringFiles"
-    assert fingering_dir.exists()
+    assert fingering_dir.exists(), f'{fingering_dir} do not exist'
     all_files = list(fingering_dir.glob("*.txt"))
     all_files.sort()
 
