@@ -11,6 +11,7 @@ from sbx.tqc.tqc import TQC
 class DroQ(TQC):
     policy_aliases: Dict[str, Type[TQCPolicy]] = {
         "MlpPolicy": TQCPolicy,
+        "MultiInputPolicy": TQCPolicy,
     }
 
     def __init__(
